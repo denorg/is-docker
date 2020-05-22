@@ -1,4 +1,4 @@
-# 🏁 isDocker
+# 🏁 is-docker
 
 Check if the process is running inside a Docker container in Deno.
 
