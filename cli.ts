@@ -1,8 +1,7 @@
-import { mode } from "./mod.ts";
+import { isDocker } from "./mod.ts";
 
-// https://deno.land/manual/tools/script_installer
-if (import.meta.main) {
-  for (let arg of Deno.args) {
-    console.log(arg, mode());
-  }
+if (isDocker()) {
+  console.log('You are inside docker environment!');
+} else {
+  console.log('You are not in docker environment!');
 }
