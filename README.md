@@ -40,6 +40,10 @@ Run tests:
 deno test --allow-read
 ```
 
+## ⭐ Related Work
+
+- [sindresorhus/is-docker](https://github.com/sindresorhus/is-docker) is the Node.js project serving as inspiration for this one
+
 ## 📄 License
 
 MIT © [Denorg](https://den.org.in)
