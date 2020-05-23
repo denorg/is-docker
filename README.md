@@ -7,7 +7,15 @@ Check if the process is running inside a Docker container in Deno.
 ```ts
 import { isDocker } from "https://raw.githubusercontent.com/denorg/isdocker/master/mod.ts";
 
-const result = isDocker();
+const checkDocker = async () => {
+  if (await isDocker()) {
+  console.log('You are inside docker environment!');
+  } else {
+    console.log('You are not in docker environment!');
+  }
+}
+
+checkDocker();
 ```
 
 Alternatively, you can use it directly from the CLI by using deno run:
