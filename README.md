@@ -5,10 +5,10 @@ Check if the process is running inside a Docker container in Deno.
 [![Test CI](https://github.com/denorg/is-docker/workflows/Test%20CI/badge.svg)](https://github.com/is-docker/starter/actions)
 
 ```ts
-import { is-docker } from "https://deno.land/x/is_docker/mod.ts";
+import { isDocker } from "https://deno.land/x/is_docker/mod.ts";
 
 const checkDocker = async () => {
-  if (await is-docker()) {
+  if (await isDocker()) {
   console.log('You are inside docker environment!');
   } else {
     console.log('You are not in docker environment!');
