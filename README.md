@@ -5,7 +5,7 @@ Check if the process is running inside a Docker container in Deno.
 [![Test CI](https://github.com/denorg/is-docker/workflows/Test%20CI/badge.svg)](https://github.com/is-docker/starter/actions)
 
 ```ts
-import { is-docker } from "https://raw.githubusercontent.com/denorg/is-docker/master/mod.ts";
+import { is-docker } from "https://deno.land/x/is_docker/mod.ts";
 
 const checkDocker = async () => {
   if (await is-docker()) {
@@ -21,13 +21,13 @@ checkDocker();
 Alternatively, you can use it directly from the CLI by using deno run:
 
 ```bash
-deno run --allow-read https://raw.githubusercontent.com/denorg/is-docker/master/cli.ts
+deno run --allow-read https://deno.land/x/is_docker/cli.ts
 ```
 
 You can also install it globally using the following:
 
 ```bash
-deno install --allow-read -n is_docker https://raw.githubusercontent.com/denorg/is-docker/master/cli.ts
+deno install --allow-read -n is_docker https://deno.land/x/is_docker/cli.ts
 ```
 
 Then, the package is available to run:
