@@ -1,6 +1,6 @@
 let hasDocker: boolean;
 
-const hasDockerEnv = () => {
+const hasDockerEnv = async () => {
 	try {
 		Deno.statSync('/.dockerenv');
 		return true;
@@ -9,7 +9,7 @@ const hasDockerEnv = () => {
 	}
 }
 
-const hasDockerCGroup = () => {
+const hasDockerCGroup = async () => {
 	try {
     const data = Deno.readFileSync("/proc/self/cgroup");
 		return new TextDecoder("utf-8").decode(data).includes('docker')
@@ -18,9 +18,9 @@ const hasDockerCGroup = () => {
 	}
 }
 
-export function isDocker() {
+export async function isDocker() {
   if (hasDocker === undefined) {
-	  hasDocker = hasDockerEnv() || hasDockerCGroup();
+	  hasDocker = await hasDockerEnv() || await hasDockerCGroup();
   }
   return hasDocker;
 }
