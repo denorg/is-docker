@@ -27,7 +27,7 @@ deno run --allow-read https://deno.land/x/is_docker/cli.ts
 You can also install it globally using the following:
 
 ```bash
-deno install --allow-read -n is_docker https://deno.land/x/is_docker/cli.ts
+deno install --allow-read -n is-docker https://deno.land/x/is_docker/cli.ts
 ```
 
 Then, the package is available to run:
